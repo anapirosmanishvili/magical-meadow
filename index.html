@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Волшебная поляна</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;text-align:center;background:#e9f9ed;color:#24533c}
+header{background:#a8e6cf;padding:40px 15px}
+h1{font-size:34px}
+button{padding:12px 22px;margin:8px;border:0;border-radius:25px;background:#fff;color:#24533c;font-size:17px;cursor:pointer}
+main{padding:30px 15px}
+.characters{font-size:65px;margin:25px 0}
+.card{background:white;border-radius:22px;padding:25px;margin:20px auto;max-width:600px;box-shadow:0 5px 20px #0001}
+footer{padding:25px;background:#a8e6cf}
+</style>
+</head>
+<body>
+<header>
+<h1 id="title">🌈 Волшебная поляна</h1>
+<p id="subtitle">Добро пожаловать в мир добрых мультфильмов!</p>
+<button onclick="changeLanguage('ru')">🇷🇺 Русский</button>
+<button onclick="changeLanguage('ka')">🇬🇪 ქართული</button>
+</header>
+<main>т
+<div class="characters">🐑 🐸 🐝 🦒</div>
+<div class="card">
+<h2 id="heading">Наши мультфильмы 🎬</h2>
+<p id="description">Здесь скоро появятся приключения наших друзей!</p>
+</div>
+</main>
+<footer>© 2026 Magical Meadow</footer>
+<script>
+function changeLanguage(lang){
+const ge=lang==='ka';
+document.documentElement.lang=lang;
+document.getElementById('title').textContent=ge?'🌈 ჯადოსნური მინდორი':'🌈 Волшебная поляна';
+document.getElementById('subtitle').textContent=ge?'კეთილი იყოს თქვენი მობრძანება კეთილი მულტფილმების სამყაროში!':'Добро пожаловать в мир добрых мультфильмов!';
+document.getElementById('heading').textContent=ge?'ჩვენი მულტფილმები 🎬':'Наши мультфильмы 🎬';
+document.getElementById('description').textContent=ge?'აქ მალე ჩვენი მეგობრების თავგადასავლები გამოჩნდება!':'Здесь скоро появятся приключения наших друзей!';
+}
+</script>
+</body>
+</html>
